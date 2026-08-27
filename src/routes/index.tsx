@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import { Instagram, ShoppingBag, ShoppingCart, ChevronDown, ArrowUp } from "lucide-react";
 
@@ -161,7 +161,13 @@ function TopBar() {
 
           className="flex items-center gap-2 rounded-full bg-background/80 px-3 py-1.5 shadow-[var(--shadow-soft)] backdrop-blur transition-transform hover:scale-105"
         >
-          <img src={logo} alt="Logo CV Subur Makmur" width={36} height={36} className="h-9 w-9" />
+          <img
+            src={logo}
+            alt="Logo CV Subur Makmur"
+            width={162}
+            height={36}
+            className="h-9 w-auto object-contain"
+          />
 
           <span className="hidden text-sm font-bold tracking-tight text-primary sm:inline">
             CV SUBUR MAKMUR
@@ -218,11 +224,11 @@ function Hero() {
 
           alt="Logo CV Subur Makmur"
 
-          width={720}
+          width={500}
 
-          height={720}
+          height={111}
 
-          className="h-[30rem] w-[30rem] translate-y-8 drop-shadow-lg sm:h-[42rem] sm:w-[42rem]"
+          className="h-auto w-[30rem] translate-y-8 drop-shadow-lg sm:w-[42rem] object-contain"
         />
 
         <h1 className="mt-5 text-3xl font-extrabold uppercase tracking-[0.15em] text-primary-foreground drop-shadow-md sm:text-5xl lg:text-6xl">
@@ -447,14 +453,14 @@ function Footer() {
           alt="Logo CV Subur Makmur"
           loading="lazy"
           width={256}
-          height={256}
-          className="h-64 w-64"
+          height={57}
+          className="h-auto w-64 object-contain"
         />
 
         <p className="text-lg font-bold uppercase tracking-widest">CV Subur Makmur</p>
 
         <p className="max-w-md text-sm text-primary-foreground/80">
-          Pupuk, Pestisida, Benih, Alat Pertanian â€” TENTU ADA. 100% Original &amp; Terpercaya.
+          Pupuk, Pestisida, Benih, Alat Pertanian — TENTU ADA. 100% Original &amp; Terpercaya.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
@@ -504,7 +510,7 @@ function Footer() {
         </a>
 
         <p className="text-xs text-primary-foreground/60">
-          Â© {new Date().getFullYear()} CV Subur Makmur. Seluruh hak cipta dilindungi.
+          © {new Date().getFullYear()} CV Subur Makmur. Seluruh hak cipta dilindungi.
         </p>
       </div>
     </footer>
