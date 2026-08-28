@@ -1,6 +1,8 @@
 ﻿import { createFileRoute } from "@tanstack/react-router";
 
-import { Instagram, ShoppingBag, ShoppingCart, ChevronDown, ArrowUp } from "lucide-react";
+import { Instagram, ChevronDown, ArrowUp, MapPin } from "lucide-react";
+
+import * as React from "react";
 
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 
@@ -11,6 +13,10 @@ import heroFallback from "@/assets/hero-fallback.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
 
 const logo = logoAsset.url;
+
+import tokopediaLogo from "@/assets/tokopedia.png";
+
+import shopeeLogo from "@/assets/shopee.png";
 
 import director from "@/assets/director.jpg";
 
@@ -28,11 +34,99 @@ import staff6 from "@/assets/staff-6.jpg";
 
 import staff7 from "@/assets/staff-7.jpg";
 
-const TOKOPEDIA_URL = "https://www.tokopedia.com/";
+import staff8 from "@/assets/staff-8.jpg";
 
-const SHOPEE_URL = "https://shopee.co.id/";
+import partner01 from "@/assets/partners/partner-01.jpg";
 
-const INSTAGRAM_URL = "https://www.instagram.com/cvsuburmakmur";
+import partner02 from "@/assets/partners/partner-02.jpg";
+
+import partner03 from "@/assets/partners/partner-03.png";
+
+import partner04 from "@/assets/partners/partner-04.png";
+
+import partner05 from "@/assets/partners/partner-05.png";
+
+import partner06 from "@/assets/partners/partner-06.jpg";
+
+import partner07 from "@/assets/partners/partner-07.jpg";
+
+import partner08 from "@/assets/partners/partner-08.png";
+
+import partner09 from "@/assets/partners/partner-09.png";
+
+import partner10 from "@/assets/partners/partner-10.jpg";
+
+import partner11 from "@/assets/partners/partner-11.jpg";
+
+import partner12 from "@/assets/partners/partner-12.png";
+
+import partner13 from "@/assets/partners/partner-13.jpg";
+
+import partner14 from "@/assets/partners/partner-14.png";
+
+import partner15 from "@/assets/partners/partner-15.png";
+
+import partner16 from "@/assets/partners/partner-16.jpg";
+
+import partner17 from "@/assets/partners/partner-17.jpg";
+
+import partner18 from "@/assets/partners/partner-18.jpg";
+
+import partner19 from "@/assets/partners/partner-19.png";
+
+import partner20 from "@/assets/partners/partner-20.jpg";
+
+import partner21 from "@/assets/partners/partner-21.png";
+
+import partner22 from "@/assets/partners/partner-22.png";
+
+import partner23 from "@/assets/partners/partner-23.jpg";
+
+import partner24 from "@/assets/partners/partner-24.png";
+
+import partner25 from "@/assets/partners/partner-25.jpg";
+
+import partner26 from "@/assets/partners/partner-26.png";
+
+import partner27 from "@/assets/partners/partner-27.png";
+
+import partner28 from "@/assets/partners/partner-28.png";
+
+import partner29 from "@/assets/partners/partner-29.png";
+
+import partner30 from "@/assets/partners/partner-30.jpg";
+
+import partner31 from "@/assets/partners/partner-31.png";
+
+import partner32 from "@/assets/partners/partner-32.png";
+
+import partner33 from "@/assets/partners/partner-33.png";
+
+import partner34 from "@/assets/partners/partner-34.jpg";
+
+import partner35 from "@/assets/partners/partner-35.png";
+
+import partner36 from "@/assets/partners/partner-36.jpg";
+
+import partner37 from "@/assets/partners/partner-37.png";
+
+import partner38 from "@/assets/partners/partner-38.png";
+
+import partner39 from "@/assets/partners/partner-39.jpg";
+
+import partner40 from "@/assets/partners/partner-40.png";
+
+import partner41 from "@/assets/partners/partner-41.jpg";
+
+import partner42 from "@/assets/partners/partner-42.png";
+
+import partner43 from "@/assets/partners/partner-43.jpg";
+
+const TOKOPEDIA_URL = "https://tk.tokopedia.com/ZSVsjXJM9/";
+
+const SHOPEE_URL = "https://s.shopee.co.id/9zxHtPPj70";
+
+const INSTAGRAM_URL = "https://www.instagram.com/suburmakmur.agriculture?igsi=MWVrd2xseXVkMW1qZQ==";
 
 const STAFF = [
   { name: "Ayu", role: "WAKIL DIREKTUR", photo: staff1 },
@@ -43,63 +137,59 @@ const STAFF = [
 
   { name: "Tri", role: "SALES", photo: staff4 },
 
-  { name: "Rina", role: "Admin", photo: staff5 },
+  { name: "Runti", role: "Admin", photo: staff5 },
 
   { name: "Rista", role: "Admin", photo: staff6 },
 
   { name: "Tia", role: "Purchase Order", photo: staff7 },
+
+  { name: "Keysa", role: "Staff", photo: staff8 },
 ];
 
-const PARTNERS = [
-  "Petrokimia Gresik",
-  "Pupuk Kaltim",
-  "Pupuk Kujang",
-  "Pupuk Iskandar Muda",
-
-  "Syngenta",
-  "Bayer Crop Science",
-  "BASF",
-  "Corteva",
-  "FMC",
-  "Nufarm",
-
-  "Dow AgroSciences",
-  "UPL",
-  "Sumitomo Chemical",
-  "Nippon Soda",
-  "Agricon",
-
-  "Petrosida Gresik",
-  "Dharma Guna Wibawa",
-  "Panca Agro Niaga",
-  "Royal Agro",
-
-  "Bisi International",
-  "East West Seed",
-  "Panah Merah",
-  "Cap Kapal Terbang",
-
-  "Known You Seed",
-  "Takii Seed",
-  "Sakata Seed",
-  "Tanindo Subur Prima",
-
-  "Meroke Tetap Jaya",
-  "Behn Meyer",
-  "Yara Indonesia",
-  "Saprotan Utama",
-
-  "Gramoxone",
-  "Roundup",
-  "Sido Agung",
-  "Multi Sarana Indotani",
-
-  "Honda Power Products",
-  "Yanmar Agri",
-  "Quick Traktor",
-  "Maspion Agro",
-
-  "Sanyo Sprayer",
+const PARTNER_LOGOS = [
+  partner01,
+  partner02,
+  partner03,
+  partner04,
+  partner05,
+  partner06,
+  partner07,
+  partner08,
+  partner09,
+  partner10,
+  partner11,
+  partner12,
+  partner13,
+  partner14,
+  partner15,
+  partner16,
+  partner17,
+  partner18,
+  partner19,
+  partner20,
+  partner21,
+  partner22,
+  partner23,
+  partner24,
+  partner25,
+  partner26,
+  partner27,
+  partner28,
+  partner29,
+  partner30,
+  partner31,
+  partner32,
+  partner33,
+  partner34,
+  partner35,
+  partner36,
+  partner37,
+  partner38,
+  partner39,
+  partner40,
+  partner41,
+  partner42,
+  partner43,
 ];
 
 export const Route = createFileRoute("/")({
@@ -142,6 +232,8 @@ function Index() {
       <Profile />
 
       <Partners />
+
+      <LocationMap />
 
       <Footer />
 
@@ -253,7 +345,13 @@ function Hero() {
 
             className="inline-flex items-center justify-center gap-2 rounded-full bg-tokopedia px-7 py-3.5 text-base font-bold text-tokopedia-foreground shadow-[var(--shadow-lift)] transition-transform duration-200 hover:scale-105 hover:brightness-110"
           >
-            <ShoppingCart className="h-5 w-5" />
+            <img
+              src={tokopediaLogo}
+              alt="Logo Tokopedia"
+              width={20}
+              height={20}
+              className="h-5 w-5 object-contain"
+            />
             Kunjungi Tokopedia
           </a>
 
@@ -266,7 +364,13 @@ function Hero() {
 
             className="inline-flex items-center justify-center gap-2 rounded-full bg-shopee px-7 py-3.5 text-base font-bold text-shopee-foreground shadow-[var(--shadow-lift)] transition-transform duration-200 hover:scale-105 hover:brightness-110"
           >
-            <ShoppingBag className="h-5 w-5" />
+            <img
+              src={shopeeLogo}
+              alt="Logo Shopee"
+              width={20}
+              height={20}
+              className="h-5 w-5 object-contain"
+            />
             Kunjungi Shopee
           </a>
         </div>
@@ -291,7 +395,7 @@ function Hero() {
             className="inline-flex items-center gap-2 text-sm font-medium text-primary-foreground/90 transition-colors hover:text-accent"
           >
             <Instagram className="h-5 w-5" />
-            Follow @cvsuburmakmur
+            Follow @suburmakmur.agriculture
           </a>
         </div>
       </div>
@@ -408,38 +512,108 @@ function Profile() {
   );
 }
 
-function PartnerLogo({ name }: { name: string }) {
+function PartnerLogo({ photo }: { photo: string }) {
+  const isPng = photo.toLowerCase().includes(".png");
   return (
-    <div className="flex h-24 w-44 shrink-0 items-center justify-center rounded-xl border border-border bg-card px-4 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
-      <span className="text-center text-sm font-bold leading-tight text-primary">{name}</span>
+    <div
+      className={`flex h-24 w-44 shrink-0 items-center justify-center rounded-xl border border-border px-3 transition duration-300 ${isPng ? "bg-white" : "bg-card"}`}
+    >
+      <img
+        src={photo}
+        alt="Logo partner CV Subur Makmur"
+        loading="lazy"
+        className="max-h-16 max-w-full object-contain"
+      />
     </div>
   );
 }
 
 function Partners() {
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const [isHovering, setIsHovering] = React.useState(false);
+  const [isDragging, setIsDragging] = React.useState(false);
+  const startXRef = React.useRef(0);
+  const startScrollLeftRef = React.useRef(0);
   return (
     <section id="partner" className="scroll-mt-20 bg-secondary/50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <SectionHeading
           eyebrow="Jaminan Keaslian"
-
           title="Partner &amp; Merek Resmi"
-
           subtitle="Kami bermitra dengan pabrikan dan distributor resmi pupuk, pestisida, benih, serta alat pertanian."
         />
       </div>
-
-      <div className="group relative mt-12 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div className="marquee-track flex w-max gap-5 px-5 group-hover:[animation-play-state:paused]">
-          {[...PARTNERS, ...PARTNERS].map((name, i) => (
-            <PartnerLogo key={`${name}-${i}`} name={name} />
+      <div
+        ref={containerRef}
+        className={`relative mt-12 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden select-none ${isDragging ? "cursor-grabbing" : isHovering ? "cursor-grab" : ""}`}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => {
+          setIsHovering(false);
+          setIsDragging(false);
+        }}
+        onPointerDown={(e) => {
+          setIsDragging(true);
+          startXRef.current = e.clientX;
+          startScrollLeftRef.current = containerRef.current?.scrollLeft ?? 0;
+          (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+        }}
+        onPointerMove={(e) => {
+          if (!isDragging || !containerRef.current) return;
+          const dx = e.clientX - startXRef.current;
+          containerRef.current.scrollLeft = startScrollLeftRef.current - dx;
+        }}
+        onPointerUp={() => setIsDragging(false)}
+        onPointerCancel={() => setIsDragging(false)}
+      >
+        <div
+          className={`marquee-track flex w-max gap-5 px-5 ${isHovering ? "marquee-paused" : ""}`}
+        >
+          {[...PARTNER_LOGOS, ...PARTNER_LOGOS].map((photo, i) => (
+            <PartnerLogo key={`${photo}-${i}`} photo={photo} />
           ))}
         </div>
       </div>
-
       <p className="mt-6 text-center text-xs text-muted-foreground">
         Geser ke kanan atau kiri untuk melihat seluruh partner kami.
       </p>
+    </section>
+  );
+}
+
+function LocationMap() {
+  return (
+    <section id="lokasi" className="scroll-mt-20 bg-background py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
+        <SectionHeading
+          eyebrow="Lokasi"
+          title="Kunjungi Toko Kami"
+          subtitle="Datang langsung ke toko CV Subur Makmur untuk melihat produk dan berkonsultasi."
+        />
+        <div className="mt-12 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lift)]">
+          <iframe
+            src="https://www.google.com/maps?q=-7.6101029,110.8745667&z=16&output=embed"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Peta Lokasi Toko Subur Makmur"
+            className="h-[320px] w-full sm:h-[420px]"
+          />
+        </div>
+        <div className="mt-6 flex justify-center">
+          <a
+            href="https://maps.app.goo.gl/FDc6VhLYKcbeEUEM6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105"
+          >
+            <MapPin className="h-4 w-4" />
+            Buka di Google Maps
+          </a>
+        </div>
+      </div>
     </section>
   );
 }

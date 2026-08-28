@@ -56,3 +56,6 @@ dist-ssr
 
 *.sw?
 
+*Zone.Identifier
+*:Zone.Identifier
+

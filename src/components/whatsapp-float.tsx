@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_NUMBER = "6281234567890";
 
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Halo%20CV%20Subur%20Makmur%2C%20saya%20ingin%20bertanya%20tentang%20produk%20pertanian.`;
+const WHATSAPP_URL = `https://wa.me/+628985246104?text=Halo%20CV%20Subur%20Makmur%2C%20saya%20ingin%20bertanya%20tentang%20produk%20pertanian.`;
 
 export function WhatsAppFloat() {
   return (

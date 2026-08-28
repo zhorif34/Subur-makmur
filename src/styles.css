@@ -311,6 +311,10 @@
   animation: marquee-scroll 60s linear infinite;
 }
 
+@utility marquee-paused {
+  animation-play-state: paused;
+}
+
 @keyframes marquee-scroll {
   from {
     transform: translateX(0);
