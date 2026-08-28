@@ -587,7 +587,7 @@ function LocationMap() {
         <SectionHeading
           eyebrow="Lokasi"
           title="Kunjungi Toko Kami"
-          subtitle="Datang langsung ke toko CV Subur Makmur untuk melihat produk dan berkonsultasi."
+          subtitle="Datang langsung ke toko CV Subur Makmur untuk melihat produk dan berkonsultasi dengan kami."
         />
         <div className="mt-12 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lift)]">
           <iframe
