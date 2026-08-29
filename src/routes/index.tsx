@@ -18,6 +18,8 @@ import tokopediaLogo from "@/assets/tokopedia.png";
 
 import shopeeLogo from "@/assets/shopee.png";
 
+import tiktokLogo from "@/assets/tiktok.png";
+
 import director from "@/assets/director.jpg";
 
 import staff1 from "@/assets/staff-1.jpg";
@@ -125,6 +127,8 @@ import partner43 from "@/assets/partners/partner-43.jpg";
 const TOKOPEDIA_URL = "https://tk.tokopedia.com/ZSVsjXJM9/";
 
 const SHOPEE_URL = "https://s.shopee.co.id/9zxHtPPj70";
+
+const TIKTOK_URL = "https://vt.tiktok.com/ZSVsj9ygB/?page=Mall";
 
 const INSTAGRAM_URL = "https://www.instagram.com/suburmakmur.agriculture?igsi=MWVrd2xseXVkMW1qZQ==";
 
@@ -372,6 +376,22 @@ function Hero() {
               className="h-5 w-5 object-contain"
             />
             Kunjungi Shopee
+          </a>
+
+          <a
+            href={TIKTOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-7 py-3.5 text-base font-bold text-white shadow-[var(--shadow-lift)] transition-transform duration-200 hover:scale-105 hover:brightness-110"
+          >
+            <img
+              src={tiktokLogo}
+              alt="Logo TikTok"
+              width={20}
+              height={20}
+              className="h-5 w-5 object-contain"
+            />
+            Kunjungi Tiktokshop
           </a>
         </div>
 
@@ -660,6 +680,22 @@ function Footer() {
             className="rounded-full bg-shopee px-5 py-2 text-sm font-semibold text-shopee-foreground transition-transform hover:scale-105"
           >
             Shopee
+          </a>
+
+          <a
+            href={TIKTOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-2 text-sm font-semibold text-white transition-transform hover:scale-105"
+          >
+            <img
+              src={tiktokLogo}
+              alt="Logo TikTok"
+              width={16}
+              height={16}
+              className="h-4 w-4 object-contain"
+            />
+            Tiktokshop
           </a>
 
           <a
