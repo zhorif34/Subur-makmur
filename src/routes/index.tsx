@@ -360,6 +360,22 @@ function Hero() {
           </a>
 
           <a
+            href={TIKTOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-7 py-3.5 text-base font-bold text-white shadow-[var(--shadow-lift)] transition-transform duration-200 hover:scale-105 hover:brightness-110"
+          >
+            <img
+              src={tiktokLogo}
+              alt="Logo TikTok"
+              width={20}
+              height={20}
+              className="h-5 w-5 object-contain"
+            />
+            Kunjungi Tiktokshop
+          </a>
+
+          <a
             href={SHOPEE_URL}
 
             target="_blank"
@@ -376,22 +392,6 @@ function Hero() {
               className="h-5 w-5 object-contain"
             />
             Kunjungi Shopee
-          </a>
-
-          <a
-            href={TIKTOK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-7 py-3.5 text-base font-bold text-white shadow-[var(--shadow-lift)] transition-transform duration-200 hover:scale-105 hover:brightness-110"
-          >
-            <img
-              src={tiktokLogo}
-              alt="Logo TikTok"
-              width={20}
-              height={20}
-              className="h-5 w-5 object-contain"
-            />
-            Kunjungi Tiktokshop
           </a>
         </div>
 
