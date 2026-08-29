@@ -665,8 +665,15 @@ function Footer() {
 
             rel="noopener noreferrer"
 
-            className="rounded-full bg-tokopedia px-5 py-2 text-sm font-semibold text-tokopedia-foreground transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-full bg-tokopedia px-5 py-2 text-sm font-semibold text-tokopedia-foreground transition-transform hover:scale-105"
           >
+            <img
+              src={tokopediaLogo}
+              alt="Logo Tokopedia"
+              width={16}
+              height={16}
+              className="h-4 w-4 object-contain"
+            />
             Tokopedia
           </a>
 
@@ -677,8 +684,15 @@ function Footer() {
 
             rel="noopener noreferrer"
 
-            className="rounded-full bg-shopee px-5 py-2 text-sm font-semibold text-shopee-foreground transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-full bg-shopee px-5 py-2 text-sm font-semibold text-shopee-foreground transition-transform hover:scale-105"
           >
+            <img
+              src={shopeeLogo}
+              alt="Logo Shopee"
+              width={16}
+              height={16}
+              className="h-4 w-4 object-contain"
+            />
             Shopee
           </a>
 
